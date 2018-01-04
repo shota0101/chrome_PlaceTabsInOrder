@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "PlaceTabsInOrder",
+  "description": "タブの順番が分かるようにタイトルの先頭に順番を表示",
+  "version": "1.0",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": ["bg.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["script.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
